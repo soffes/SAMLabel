@@ -64,6 +64,10 @@
 	[super drawTextInRect:rect];
 }
 
+- (CGSize)intrinsicContentSize {
+    CGSize size = [super intrinsicContentSize];
+    return CGSizeMake(size.width + self.textEdgeInsets.left + self.textEdgeInsets.right, size.height + self.textEdgeInsets.top + self.textEdgeInsets.bottom);
+}
 
 #pragma mark - Private
 
