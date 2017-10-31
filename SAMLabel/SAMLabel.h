@@ -12,10 +12,10 @@
  The vertical alignment of text within a label.
  */
 typedef enum {
-	/** Aligns the text vertically at the top in the label (the default). */
+	/** Aligns the text vertically at the top in the label. */
 	SAMLabelVerticalTextAlignmentTop = UIControlContentVerticalAlignmentTop,
 
-	/** Aligns the text vertically in the center of the label. */
+	/** Aligns the text vertically in the center of the label (the default). */
 	SAMLabelVerticalTextAlignmentMiddle = UIControlContentVerticalAlignmentCenter,
 
 	/** Aligns the text vertically at the bottom in the label. */
