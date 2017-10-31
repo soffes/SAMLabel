@@ -12,16 +12,12 @@
 
 #pragma mark - Accessors
 
-@synthesize verticalTextAlignment = _verticalTextAlignment;
-
 - (void)setVerticalTextAlignment:(SAMLabelVerticalTextAlignment)verticalTextAlignment {
 	_verticalTextAlignment = verticalTextAlignment;
 
 	[self setNeedsLayout];
 }
 
-
-@synthesize textEdgeInsets = _textEdgeInsets;
 
 - (void)setTextEdgeInsets:(UIEdgeInsets)textEdgeInsets {
 	_textEdgeInsets = textEdgeInsets;
@@ -34,7 +30,7 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
 	if ((self = [super initWithCoder:aDecoder])) {
-		[self initialize];
+        self.verticalTextAlignment = SAMLabelVerticalTextAlignmentMiddle;
 	}
 	return self;
 }
@@ -42,7 +38,7 @@
 
 - (id)initWithFrame:(CGRect)aFrame {
 	if ((self = [super initWithFrame:aFrame])) {
-		[self initialize];
+        self.verticalTextAlignment = SAMLabelVerticalTextAlignmentMiddle;
 	}
 	return self;
 }
@@ -69,11 +65,5 @@
     return CGSizeMake(size.width + self.textEdgeInsets.left + self.textEdgeInsets.right, size.height + self.textEdgeInsets.top + self.textEdgeInsets.bottom);
 }
 
-#pragma mark - Private
-
-- (void)initialize {
-	self.verticalTextAlignment = SAMLabelVerticalTextAlignmentMiddle;
-	self.textEdgeInsets = UIEdgeInsetsZero;
-}
 
 @end
